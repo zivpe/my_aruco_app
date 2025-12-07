@@ -6,8 +6,8 @@ from skimage.color import rgb2gray
 
 # --- הגדרות עמוד ---
 st.set_page_config(page_title="ArUco Area Calculator", layout="wide")
-st.title("🌱 מדידת שטח אובייקט באמצעות ArUco")
-st.write("העלה תמונה הכוללת סמן ArUco (בגודל 5x5 ס\"מ) ואת האובייקט אותו תרצה למדוד.")
+st.title("🌱ArUco מדידת שטח אובייקט באמצעות ")
+st.write("העלה תמונה הכוללת סמן (בגודל 5x5 ס\"מ) ואת האובייקט אותו תרצה למדוד.")
 
 # --- פונקציות עזר ---
 
@@ -62,7 +62,7 @@ if uploaded_file is not None:
     st.image(image_rgb, use_column_width=True)
 
     # --- שלב 1: זיהוי ArUco וחישוב יחס ---
-    st.header("שלב 1: זיהוי סמן ArUco")
+    st.header("שלב 1: זיהוי סמן ")
     
     # הגדרת המילון והגלאי (בהתאם לקוד המקורי שלך)
     aruco_dict = cv2.aruco.getPredefinedDictionary(cv2.aruco.DICT_5X5_50)
