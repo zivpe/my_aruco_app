@@ -93,7 +93,7 @@ if uploaded_file is not None:
         # חישוב היחס: כמה סמ"ר שווה כל פיקסל בודד
         cm2_per_px2_ratio = aruco_area_cm_real / aruco_area_px
         
-        st.success(f"ArUco זוהה בהצלחה! שטח בפיקסלים: {aruco_area_px:.1f}. יחס המרה: {cm2_per_px2_ratio:.6f} סמ\"ר לפיקסל.")
+        st.success(f" זוהה בהצלחה! שטח בפיקסלים ArUco: {aruco_area_px:.1f}. יחס המרה: {cm2_per_px2_ratio:.6f} סמ\"ר לפיקסל.")
 
     else:
         st.error("לא נמצא סמן ArUco בתמונה. וודא שהסמן ברור ומסוג 5X5.")
