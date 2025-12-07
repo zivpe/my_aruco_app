@@ -7,7 +7,7 @@ from skimage.color import rgb2gray
 # --- הגדרות עמוד ---
 st.set_page_config(page_title="ArUco Area Calculator", layout="wide")
 st.title("🌱ArUco מדידת שטח אובייקט באמצעות ")
-st.write("העלה תמונה הכוללת סמן (בגודל 5x5 ס\"מ) ואת האובייקט אותו תרצה למדוד.")
+st.write(" העלה תמונה הכוללת סמן (בגודל5 סמ על 5 סמ ) ואת האובייקט אותו תרצה למדוד")
 
 # --- פונקציות עזר ---
 
@@ -41,7 +41,7 @@ def segment_image_kmeans(img, k=3, attempts=10):
 
 # --- סרגל צד (Sidebar) ---
 st.sidebar.header("הגדרות סגמנטציה")
-# בחירת מספר הקלאסטרים (K) - כמו במחברת
+# בחירת מספר הקלאסטרים (K) 
 k_value = st.sidebar.slider('מספר צבעים (K):', min_value=2, max_value=6, value=3, help="לכמה צבעים דומיננטיים לחלק את התמונה?")
 attempts_value = st.sidebar.slider('מספר ניסיונות K-Means:', min_value=1, max_value=10, value=5)
 
@@ -116,7 +116,7 @@ if uploaded_file is not None:
             st.subheader("בחירת האובייקט למדידה")
             
             # --- יצירת ממשק בחירה למשתמש ---
-            # נציג למשתמש את ה"צבעים" (centers) שהאלגוריתם מצא, והוא יבחר איזה מהם הוא העלה
+            # נציג למשתמש את ה"צבעים"  שהאלגוריתם מצא, והוא יבחר איזה מהם הוא העלה
             
             clusters_data = []
             cols = st.columns(k_value) # יצירת עמודות להצגת דוגמיות הצבע
@@ -137,7 +137,7 @@ if uploaded_file is not None:
 
             # תיבת בחירה למשתמש
             selected_cluster_id = st.selectbox(
-                "בחר את מספר הקלאסטר (Cluster ID) שמייצג את האובייקט (למשל, העלה הירוק):",
+                "בחר את מספר הקלאסטר שמייצג את האובייקט (למשל, העלה הירוק):",
                 options=[c["id"] for c in clusters_data]
             )
 
